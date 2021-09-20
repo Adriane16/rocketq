@@ -2,17 +2,22 @@ const express = require('express')
 const route = require ('./route')
 const path = require('path')
 
-const server = express() /*iniciando o express */
+// iniciando o express 
+const server = express() 
 
-server.set('view engine', 'ejs') /*quem vai ser o responsavel (view engine)*/
+//quem vai ser o responsavel (view engine)
+server.set('view engine', 'ejs')
 
 server.use(express.static("public"))
 
-server.set('views', path.join(__dirname, 'views')) /*path pega o caminho da pasta e junta. o dirname se torna src*/
+// path pega o caminho da pasta e junta. o dirname se torna src
+server.set('views', path.join(__dirname, 'views'))
 
-server.use(route) /*use o arquivo route*/
+// use o arquivo route
+server.use(route)
 
-server.listen(3000, () => console.log("RODANDO")) /* funcionalidade que chama(server listen) (função= ajuda a ela funcionar e realizar algum codigo)*/
+// funcionalidade que chama(server listen) (função= ajuda a ela funcionar e realizar algum codigo)
+server.listen(3000, () => console.log("RODANDO"))
 
 
 

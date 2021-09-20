@@ -4,20 +4,21 @@ const modal = Modal()
 
 const modalTitle= document.querySelector('.modal h2')
 const modalDescription = document.querySelector('.modal p')
-const modalButton = document.querySelector('.modal buttton')
+const modalButton = document.querySelector('.modal button')
 
-/*pegar todos os botões que existem na check*/
+// pegar todos os botões que existem na check
+
 const checkButtons = document.querySelectorAll(".actions a.check")
 
 checkButtons.forEach(button => {
-    //adicionar a escuta
+
+    // adicionar a escuta
+
     button.addEventListener("click", handleClick)
 })
 
-/*pegar quando o marcar como o lido for clicado*/
-
-
-/*Qual o botão delete for clicado ele abre a modal*/
+// pegar quando o marcar como o lido for clicado
+// qual o botão delete for clicado ele abre a modal
 
 const deleteButton = document.querySelectorAll(".actions a.delete")
 
@@ -31,9 +32,9 @@ function handleClick(event, check = true){
 
     modalTitle.innerHTML= `${text} essa pergunta?`
     modalDescription.innerHTML = `Tem certeza que deseja ${text.toLowerCase()} essa pergunta?`
+    modalButton.innerHTML = `Sim, ${text.toLowerCase()}`
     
-    
-    
-    
-    modal.open() //abrir modal 
+    modal.open()
+
+    // abrir modal 
 }
