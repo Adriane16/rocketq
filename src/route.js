@@ -10,5 +10,11 @@ route.get('/create-pass', (req, res) => res.render("create-pass"))
 
 route.get('/room', (req, res) => res.render("room"))
 
+// formato que o formulario de dentro da modal tem que passar a informação:
+// route.post('/room/:romm/:question/:action', (req,res) => res.render())
+// parametros recebidos.
+// get é pegar, abrir a rota no navegador. 
+// post: pegando dados do formulário. 
+//  passando variavel no ejs, usa-se: <% = %>
 
 module.exports = route
