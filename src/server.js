@@ -13,7 +13,7 @@ server.use(express.static("public"))
 // path pega o caminho da pasta e junta. o dirname se torna src
 server.set('views', path.join(__dirname, 'views'))
 
-server.use(expresse.urlencoded({extended:true}))
+server.use(express.urlencoded({extended: true}))
 
 // use o arquivo route
 server.use(route)
